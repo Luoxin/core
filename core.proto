@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package core;
+
+option go_package = "github.com/lazygophers/core";
+
+enum ErrCode {
+	Success = 0;
+}
+
+message Option {
+	uint32 key = 1;
+	string value = 2;
+}
+
+message ListOption {
+	int32 page = 1;
+    int32 limit = 2;
+	bool show_total = 3;
+	repeated Option options = 4;
+}
