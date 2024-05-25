@@ -17,5 +17,12 @@ message ListOption {
 	int32 page = 1;
     int32 limit = 2;
 	bool show_total = 3;
+
 	repeated Option options = 4;
+}
+
+message Paginate {
+	int32 page = 1;
+    int32 limit = 2;
+    int32 total = 3;
 }
